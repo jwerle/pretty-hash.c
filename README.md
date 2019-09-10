@@ -39,7 +39,7 @@ As a [clib module](https://github.com/clibs/module):
 
 int
 main(void) {
-  module(pretty_hash) *mod = require(pretty_hash);
+  module(pretty_hash) *pretty = require(pretty_hash);
   unsigned char bytes[] = {
     0x00, 0x11, 0x22, 0x33,
     0x44, 0x55, 0x66, 0x77,
@@ -48,7 +48,7 @@ main(void) {
   };
 
   char hash[pretty_hash_BYTES] = { 0 };
-  int size = mod->pretty_hash(hash, bytes, sizeof(bytes));
+  int size = pretty->hash(hash, bytes, sizeof(bytes));
   printf("%s\n", hash);
   return 0;
 }

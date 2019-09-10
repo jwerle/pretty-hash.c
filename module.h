@@ -7,15 +7,28 @@
 
 #include "pretty-hash.h"
 
-clib_module(pretty_hash) {
-  clib_module_define(pretty_hash, CLIB_MODULE);
+/**
+ * `pretty_hash` module definition.
+ */
+module(pretty_hash) {
+  define(pretty_hash, CLIB_MODULE);
 
-  int (*pretty_hash)(char *, unsigned char *, unsigned long int);
+  /**
+   * Computes pretty hash.
+   *
+   * ```
+   *  pretty->hash(out, bytes, size);
+   * ```
+   */
+  int (*hash)(char *, unsigned char *, unsigned long int);
 };
 
-clib_module_exports(pretty_hash) {
-  clib_module_defaults(pretty_hash, CLIB_MODULE_DEFAULT),
-  .pretty_hash = pretty_hash
+/**
+ * `pretty_hash` module exports.
+ */
+exports(pretty_hash) {
+  defaults(pretty_hash, CLIB_MODULE_DEFAULT),
+  .hash = pretty_hash
 };
 
 #endif
