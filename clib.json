@@ -6,6 +6,12 @@
   "license": "MIT",
   "makefile": "Makefile",
   "prefix": ".",
+  "src": [
+    "LICENSE",
+    "module.h",
+    "pretty-hash.h",
+    "pretty-hash.c"
+  ],
   "dependencies": {
     "clibs/module": "0.1.1"
   }
