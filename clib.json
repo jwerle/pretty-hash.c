@@ -1,0 +1,12 @@
+{
+  "name": "pretty-hash",
+  "repo": "jwerle/pretty-hash.c",
+  "version": "0.0.0",
+  "description": "A C implementation of pfrazee's pretty-hash",
+  "license": "MIT",
+  "makefile": "Makefile",
+  "prefix": ".",
+  "dependencies": {
+    "clibs/module": "0.1.1"
+  }
+}
